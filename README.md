@@ -1,15 +1,15 @@
-Mappable
+Serialise::Map
 ========
 
-Mappable - a composable interface for serialising objects
+Serialise::Map - a composable interface for serialising objects
 
 SYNOPSIS
 ========
 
-    use Mappable;
+    use Serialise::Map;
     use Test;
 
-    class Foo does Mappable {
+    class Foo does Serialise::Map {
       has $.value;
 
       to-map( --> Map) {
@@ -30,7 +30,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-Mappable is a simple interface that specifies a simple contract. I can give you a map, which represents my current state and consume a map to recreate my current state.
+Serialise::Map is a simple interface that specifies a simple contract. I can give you a map, which represents my current state and consume a map to recreate my current state.
 
 AUTHOR
 ======

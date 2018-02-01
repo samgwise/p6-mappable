@@ -2,16 +2,16 @@ use v6.c;
 
 =begin pod
 
-=head1 Mappable
+=head1 Serialise::Map
 
-Mappable - a composable interface for serialising objects
+Serialise::Map - a composable interface for serialising objects
 
 =head1 SYNOPSIS
 
-  use Mappable;
+  use Serialise::Map;
   use Test;
 
-  class Foo does Mappable {
+  class Foo does Serialise::Map {
     has $.value;
 
     to-map( --> Map) {
@@ -31,7 +31,7 @@ Mappable - a composable interface for serialising objects
 
 =head1 DESCRIPTION
 
-Mappable is a simple interface that specifies a simple contract.
+Serialise::Map is a simple interface that specifies a simple contract.
 I can give you a map, which represents my current state and consume a map to recreate my current state.
 
 
@@ -47,7 +47,7 @@ This library is free software; you can redistribute it and/or modify it under th
 
 =end pod
 
-role Mappable {
+role Serialise::Map {
   method to-map( --> Map) { ... }
 
   method from-map(Map $map) { ... }

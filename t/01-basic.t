@@ -1,6 +1,6 @@
 use v6.c;
 use Test;
-use Mappable;
+use Serialise::Map;
 
 pass "replace me";
 
